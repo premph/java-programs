@@ -1,0 +1,20 @@
+OverLoading rules
+
+1. Name of method should be same in each of the classes.
+2. Return type and method argument can vary in each classes.
+3. Inheritance is not necessary.
+
+
+OverRiding rules
+1. Inheritance is required b/w parent and child classes.
+2. Method argument and return type must be same in both the class's method
+3. @Override annotation check if method is not overridden/implemented from it's superclass during complilation
+4. The access modifier of subclass method should be same or wider than superclass's access modifier
+5. If superclass throws error then subclass can either throw same,subclass of that error or no error
+6. If superclass throws no error then subclass can only declare unchecked exceptions
+
+private vs final (OverRiding)- 
+1. final method of superclass gives 'method final' error in compile time
+2. private method of superclass gives no error rather it runs the local method
+	using annotation in such cases gives no overriding done error
+   When we create object/call of private then we get error
