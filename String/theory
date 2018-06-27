@@ -1,0 +1,54 @@
+String in java
+
+1. There are 3 classes that can be used to create string in java 
+    - String - StringBuffer - StringBuilder
+2. String in java is an Object of java.lang.String
+    
+String Class (java.lang.String)
+1. String is immutable hence cannot be changed changing a String value creates a new object because if not so then changing a string
+    would change it for all the literals referring to the string.
+    Concatenating string to a string does not change the value of the string.
+    We can assign the string to the concatenated string.
+2. String acts like a pool to which String type object refer to.
+    Example - String a ="Apple";
+              String b ="Apple";
+    Does not create two String object since "Apple" was already in memory b simply refers to "Apple" without creating new object.
+3. String created through new keyword creates a new String in the memory.
+
+Comparing String
+
+1. equals() or equalsIgnoreCase compares the value of the string.
+2. == operator compares the reference of the string.
+3. compareTo() return 0,1,-1 if the string are equal,greater or smaller lexicographically.
+
+Substring of a String
+
+public String substring(int startIndex)
+public String substring(int startIndex, int endIndex)
+
+startIndex is inclusive
+endIndex is exclusive
+
+String methods()
+1. toUpperCase()
+2. length()
+3. trim()
+4. valueOf()
+5. replace()
+6. intern()
+
+
+StringBuffer class (mutable,thread-safe)
+1. insert(int,String)
+2. append(String)
+3. replace(int,int,String)
+4. delete()
+5. reverse()
+6. capacity()
+7. charAt()
+8. length()
+9. substring()
+
+
+StringBuilder class (mutable,non-synchronized)
+methods same as StringBuffer
