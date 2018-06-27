@@ -1,0 +1,18 @@
+Constructor
+
+1. A constructor has the same name as the class.
+2. Default constructor has the access modifier of the class.
+3. A constructor can have any of the 4 access modifiers.
+4. A constructor has no return type.
+5. A constructor cannot be abstract, static, final or Synchronized.
+6. Complier creates a default constructor for ech class if we declare a parameterised constructor then default constructor is not made.
+7. Constructor is called only once.
+
+Constructor Overloading
+
+1. Multiple parameterised constructor can be used and overloaded.
+
+Constructor Chaining
+
+1. this() keyword is used to call constructor of the current class while super() is used to invoke the constructor of parent class.
+2. A constructor chaining appears to execute in the opposite direction of chain as the innermost constructor is executed first.
