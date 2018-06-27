@@ -1,1 +1,48 @@
+Abstract keyword
 
+A. Abstract classes
+  1. Abstract classes cannot be instantiated.
+  2. The class extending the abstract class can create an instance of that abstract class.
+  3. If a class has even one abstract method it should be declared as an abstract class.
+  4. A abstract class may or may not have any abstract method.
+  5. Abstract class defines what an abstract method does not how it is implemented.
+  6. It is necessary to include all the method of abstract class in the first concrete class failing to do so
+      the incomplete class should also be declared as an abstract class.
+  7. We don't create a static abstract method in an abstract class as static methods cannot be overridden by subclasses.
+  
+B. Abstract Method
+  1. Abstract method does not have the input argument or the implementation part, just the prototype.
+  2. If a abstract method is present the class must also be declared as abstract.
+  
+Interface Keyword
+
+1. All variables in interface are public static final.
+2. All methods are public abstract.
+3. The next concrete class implementing the interface should implement all its abstract method (simply all method)
+    or it itself should be declared as an abstract class.
+4. An Interface is a 100% abstract class as each of its methods are abstract.
+5. An Interface can implement a class or extend an Interface.
+
+
+Abstract class vs Interface
+
+1. Abstract class can have method with implementations while Interface cannot.
+2. Abstract class can have different access modifies while Interface cannot it can only public.
+3. A class can extend only one abstract class but implement many Interfaces
+  
+From the Oracle documentation
+
+Consider using abstract classes if :
+
+You want to share code among several closely related classes.
+You expect that classes that extend your abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).
+You want to declare non-static or non-final fields.
+Consider using interfaces if :
+
+You expect that unrelated classes would implement your interface. For example,many unrelated objects can implement Serializable interface.
+You want to specify the behaviour of a particular data type, but not concerned about who implements its behaviour.
+You want to take advantage of multiple inheritance of type.
+abstract class establishes "is a" relation with concrete classes. interface provides "has a" capability for classes.
+
+Java 8 indroduced Default methods in Interface which allow the interfaces to have methods with implementation without affecting 
+  the classes that implement the interface.
