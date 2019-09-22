@@ -1,0 +1,50 @@
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+public class dd {
+
+    private static List<Path> paths = new ArrayList<>();
+
+    private static List<Path> walk(Path path) throws IOException {
+
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) 
+        {   
+            Path dummy = Paths.get(" ");
+
+            for (Path entry : stream) {
+                if (Files.isDirectory(entry)) {
+                    paths.add(entry.getFileName());
+                    paths.add(dummy);
+                    walk(entry);
+                    
+                }
+                else if (Files.isRegularFile(entry)){
+                    paths.add(entry.getFileName());
+                }
+                
+            }
+        }
+
+        return paths;
+    }
+
+
+    public static void main(String[] args) throws IOException {
+
+        Path myPath = Paths.get("D:\\folder");
+
+
+        List<Path> paths = walk(myPath);
+
+
+
+
+        paths.forEach(path -> System.out.println(path));
+    }
+}
